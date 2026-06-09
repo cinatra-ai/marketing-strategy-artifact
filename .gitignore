@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Build output (tsc outDir)
+dist/
+
+# Test coverage
+coverage/
+
+# Lockfile is not committed — CI and the host workspace install fresh
+pnpm-lock.yaml
+
+# npm pack output
+*.tgz
+
+# Secrets — never commit
+.env
+.env.*
+
+# Logs
+*.log
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
