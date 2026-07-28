@@ -10,7 +10,7 @@ Use the artifact as the shared strategy reference across your workspace. Connect
 
 The API contract is a JSON matcher response: `{ "matches": boolean, "confidence": number, "rationale": string }`. A `matches: true` result with confidence above 0.7 means the document was accepted. A `matches: false` result or a confidence below 0.7 means the document did not contain sufficient strategy signal; the rationale field names the missing or weak sections.
 
-For development, clone the repository and run `node extension-kind-gate.mjs` from the root to validate the manifest and README before publishing. The matcher skill is defined in `skills/marketing-strategy-matcher/SKILL.md` and the artifact manifest is exported from `src/index.ts`. If the gate reports a README size error or a disallowed heading, edit `README.md` and re-run the gate. If an uploaded document is misclassified, review the confidence guidance in the matcher skill and add representative section headings to the document.
+For development, clone the repository and run `node extension-kind-gate.mjs` from the root to validate the manifest and README before publishing. The matcher skill is defined in the `@cinatra-ai/marketing-strategy-matcher-skill` package and the artifact manifest is exported from `src/index.ts`. If the gate reports a README size error or a disallowed heading, edit `README.md` and re-run the gate. If an uploaded document is misclassified, review the confidence guidance in the matcher skill and add representative section headings to the document.
 
 ## Works with
 
