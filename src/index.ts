@@ -17,8 +17,23 @@ export const marketingStrategyArtifactManifest: SemanticArtifactManifest = {
   },
   skills: {
     matchers: [
-      "@cinatra-ai/marketing-strategy-artifact:marketing-strategy-matcher",
+      "@cinatra-ai/marketing-strategy-matcher-skill:marketing-strategy-matcher",
     ],
   },
   matcherConfidenceThreshold: 0.7,
+  objectTypes: [
+    {
+      type: "@cinatra-ai/marketing-strategy-artifact:artifact",
+      claim: "dedicated",
+      dispositions: {
+        projection: "artifact-safe",
+        pinnable: false,
+        snapshotPolicy: "none",
+        sensitivity: "normal",
+      },
+      schema: {
+        type: "object",
+      },
+    },
+  ],
 };
